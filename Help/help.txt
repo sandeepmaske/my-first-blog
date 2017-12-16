@@ -1,0 +1,52 @@
+
+
+ URL – Uniform Resource Locator 
+
+C:\Users\Name\djangogirls> python -m venv myvenv
+C:\Users\Name\djangogirls> myvenv\Scripts\activate
+(myvenv) ~$ pip install --upgrade pip
+(myvenv) C:\Users\Name\djangogirls> django-admin.exe startproject mysite .
+
+
+TIME_ZONE = 'Europe/Berlin'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+ALLOWED_HOSTS = ['127.0.0.1', '<your_username>.pythonanywhere.com']
+
+# create database
+(myvenv) ~/djangogirls$ python manage.py migrate
+
+# start web server
+(myvenv) ~/djangogirls$ python manage.py runserver
+
+# Creating an application
+(myvenv) ~/djangogirls$ python manage.py startapp blog
+
+# create Model - objects
+
+# Create tables for models in your database
+python manage.py makemigrations blog
+
+python manage.py createsuperuser
+
+
+--------
+Git
+--------
+
+git init
+git config --global user.name "sandeep"
+git config --global user.email sandeep@example.com
+
+git status
+
+---------
+==============================================================================================
+
+manage.py is a script that helps with management of the site. With it we will be able (amongst other things) to start a web server on our computer without installing anything else.
+
+The settings.py file contains the configuration of your website.
+
+Remember when we talked about a mail carrier checking where to deliver a letter? urls.py file contains a list of patterns used by urlresolver.
+
+==============================================================================================
+
